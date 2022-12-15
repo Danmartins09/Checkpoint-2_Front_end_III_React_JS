@@ -1,24 +1,24 @@
-import {createContext, useContext, useState} from "react"
+import {createContext, useContext, useState} from "react";
 
 
-const ThemeContext = createContext()
+const ThemeContext = createContext();
 
 
 export function ThemeProvider(props) {
 
-  const themeLocalStorage = localStorage.getItem('theme')
+  const themeLocalStorage = localStorage.getItem('theme');
 
   
   const [theme, setTheme] =
-    useState(themeLocalStorage === null ? 'dark' : themeLocalStorage)
+    useState(themeLocalStorage === null ? 'dark' : themeLocalStorage);
 
   
   function toggleTheme(themeReceived) {
 
     if(themeReceived !== theme) {
 
-      setTheme(themeReceived)
-      localStorage.setItem('theme', themeReceived)
+      setTheme(themeReceived);
+      localStorage.setItem('theme', themeReceived);
 
     }
 
@@ -38,6 +38,6 @@ export function ThemeProvider(props) {
 
 export function useTheme() {
 
-  return useContext(ThemeContext)
+  return useContext(ThemeContext);
 
 }
