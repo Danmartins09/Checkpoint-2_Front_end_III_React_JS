@@ -19,9 +19,10 @@
 .icons {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   filter: brightness(0);
+  max-height: 12rem;
 }
 
 .iconsDark{
